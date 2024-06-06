@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+</head>
+<body>
+  <input type="text">
+  <button id="btn">Hit Me</button>
+  <div>
+    <span id="test_span"></span>
+  </div>
+  <button id="btn1">Reset</button>
+
+
+  <script>
+
+    document.querySelector('#test_span').innerHTML = localStorage.getItem("Test");
+
+    document.querySelector('#btn').addEventListener('click',()=>{
+      let a = document.querySelector('input').value;
+      console.log();
+      localStorage.setItem('Test',a);
+      // sessionStorage.setItem('TEst',a);
+      document.querySelector('#test_span').innerHTML = a;
+
+    });
+
+    document.querySelector('#btn1').addEventListener('click',()=>{
+      localStorage.removeItem('Test');
+      document.querySelector('#test_span').innerHTML = "";
+
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+    <script src="scripts/logics.js" defer></script>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <h1>Rock Paper Scissor</h1>
+    <h3 id="greeting_text">Welcome</h3>
+    <p>Choose your move</p>
+    <p>Press R for Rock / P for Paper / S for scissor</p>
+   
+    <button class="user_move" id="rock_button">
+        <img class="choice_move_img" src="assets/images/rock-emoji.png">
+    </button>
+    
+    <button class="user_move" id="paper_button">
+        <img class="choice_move_img" src="assets/images/paper-emoji.png">
+    </button>
+    
+    <button class="user_move" id="scissor_button">
+        <img class="choice_move_img" src="assets/images/scissor-emoji.png">
+    </button>
+    <br>
+    <br>
+    <p id="js-result_text">Horray!! you win.</p><br>
+    <p id="js-result"><img class="result_move_img" src="assets/images/rock-emoji.png"> : <img class="result_move_img"
+            src="assets/images/rock-emoji.png">Computer`</p>
+    <br>
+    <p><b id="score_heading">Current Score</b></p>
+    <div id="js-score">
+        <script>
+            const score = JSON.parse(localStorage.getItem('score')) || {
+                user_score: 0,
+                computer_score: 0,
+                tie: 0
+            };
+
+            let score_string = `You : ${score.user_score} &nbsp &nbsp Computer : ${score.computer_score} &nbsp &nbsp Tie: ${score.tie}`;
+            document.querySelector('#js-score').innerHTML = score_string;
+        </script>
+       
+    </div>
+    <br>
+    <br>
+    
+    <button id="reset_button">
+        Reset Score
+    </button>
+
+</body>
+
+</html>

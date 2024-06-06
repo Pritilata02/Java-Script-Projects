@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calulator</title>
+</head>
+
+<body>
+  <input id="n1" type="number" placeholder="Enter a number" value="0">
+  <input id="n2" type="number" placeholder="Enter a number" value="0">
+  <div>
+    <button id="calc" onclick="calculate()">Calculate</button>
+    <button id="reset" onclick="reset()">Reset</button>
+    <button id="b1" onclick="setVal1(1)">1</button>
+    <button id="b1" onclick="setVal1(2)">2</button>
+    <button id="b1" onclick="setVal1(3)">3</button>
+    <button id="b1" onclick="setVal1(4)">4</button>
+    <button id="b1" onclick="setVal1(5)">5</button>
+    <button id="b1" onclick="setVal1(6)">6</button>
+    <button id="b1" onclick="setVal1(7)">7</button>
+    <button id="b1" onclick="setVal1(8)">8</button>
+    <button id="b1" onclick="setVal1(9)">9</button>
+    <button id="b1" onclick="setVal1(0)">0</button>
+    <span id="result">Result : 0</span>
+  </div>
+
+  <script>
+    let a, b;
+    var c;
+    const d = 10;
+
+    c = document.getElementById('result');
+
+    function calculate() {
+      a = Number(document.getElementById('n1').value);
+      b = Number(document.getElementById('n2').value);
+      c.innerText = `Result : ${a + b}`;
+    }
+    function reset() {
+      document.getElementById('n1').value = 0;
+      document.getElementById('n2').value = 0;
+      c.innerText = "Result : 0";
+    }
+
+    function setVal1(v)
+    {
+      if( document.getElementById('n1').value == 0 )
+        document.getElementById('n1').value = v;
+      else
+        document.getElementById('n1').value = document.getElementById('n1').value + v;
+    }
+
+  </script>
+</body>
+
+</html>

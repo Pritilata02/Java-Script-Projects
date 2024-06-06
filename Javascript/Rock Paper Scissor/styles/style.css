@@ -1,0 +1,52 @@
+body{
+    text-align: center;
+    background-color: rgba(236, 15, 63, 0.87);
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(247, 214, 31);
+    width: 40%;
+    margin: auto;
+}
+
+
+.choice_move_img{
+    padding: 20px;
+    height: 100px;
+    width: 100px;
+    background: transparent;
+    border-radius: 50px;
+    border-width: 4px;
+    border-color: white;
+}
+
+button.user_move{
+    background: transparent;
+    border-radius: 100px;
+    border-color: white;
+    border-style: solid;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.result_move_img{
+    height: 50px;
+    width: 50px;
+}
+
+#js-result{
+    visibility: hidden;
+}
+
+#js-result_text{
+    visibility: hidden;
+    font-size: 20px;
+    font-style: italic;
+}
+
+#reset_button{
+    color: white;
+    height: 30px;
+    width: 200px;
+    background-color: goldenrod;
+    border-color: white;
+    border-width: 1px;
+}
